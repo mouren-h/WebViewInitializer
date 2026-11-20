@@ -38,13 +38,13 @@ plaintext
  
 1.布局 XML
  
-xml
+```xml
   
 <mr.x.jh.WebViewInitializer
     android:id="@+id/ticketView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"/>
- 
+```
  
 2.Activity / Fragment Java 代码
  
@@ -81,7 +81,7 @@ ticketView.setOnResetRequest(() -> {
  
 页面销毁务必调用 destroy，释放 WebView、线程资源，避免内存泄漏
  
-java
+```java
   
 @Override
 protected void onDestroy() {
@@ -90,7 +90,7 @@ protected void onDestroy() {
         ticketView.destroy();
     }
 }
- 
+```
  
 📚 API 文档
  
@@ -98,7 +98,7 @@ protected void onDestroy() {
  
 全部34项可配置字段
  
-java
+```java
   
 setHeaderTag(String v)
 setCode(String v)
@@ -136,7 +136,7 @@ setBackInfo3(String v)
 setBackInfo4(String v)
 setBackInfo5(String v)
 setAuthor(String v)
- 
+``` 
  
 核心控制API
  
@@ -152,7 +152,7 @@ setAuthor(String v)
  
 回调监听
  
-java
+```java
   
 // 撕票完成回调
 public interface OnTornListener {
@@ -163,7 +163,7 @@ public interface OnTornListener {
 public interface OnResetRequestListener {
     void onResetRequest();
 }
- 
+```
  
 ⚠️ 注意事项
  

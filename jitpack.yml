@@ -1,0 +1,7 @@
+# Lets https://jitpack.io build this repository and serve its libraries as
+#     com.github.<user>:<repository>:<tag>
+jdk:
+  - openjdk17
+install:
+  - chmod +x gradlew
+  - ./gradlew publishToMavenLocal --no-daemon --console=plain

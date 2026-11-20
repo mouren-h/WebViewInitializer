@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="mr.x.jh">
+
+    <!-- 本地 HTTP 服务 + WebView 加载 http://127.0.0.1 必须 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- WebView 判断网络状态、WebServer 部分逻辑可用到 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 若外部私有目录在部分机型需要（Android 10 以下），如不访问公共 SD 卡可移除 -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        tools:replace="android:usesCleartextTraffic" />
+</manifest>

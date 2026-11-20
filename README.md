@@ -48,7 +48,7 @@ xml
  
 2.Activity / Fragment Java 代码
  
-java
+```java
   
 WebViewInitializer ticketView = findViewById(R.id.ticketView);
 
@@ -75,7 +75,7 @@ ticketView.setOnResetRequest(() -> {
     // 业务判断是否允许重置票据
     ticketView.resetPass(); // 恢复全新票据
 });
- 
+```
  
 3.生命周期销毁
  

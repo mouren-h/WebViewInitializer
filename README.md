@@ -39,6 +39,7 @@ plaintext
 1.布局 XML
  
 ```xml
+  
 <mr.x.jh.WebViewInitializer
     android:id="@+id/ticketView"
     android:layout_width="match_parent"
@@ -48,6 +49,7 @@ plaintext
 2.Activity / Fragment Java 代码
  
 ```java
+  
 WebViewInitializer ticketView = findViewById(R.id.ticketView);
 
 // 设置票据文字
@@ -80,6 +82,7 @@ ticketView.setOnResetRequest(() -> {
 页面销毁务必调用 destroy，释放 WebView、线程资源，避免内存泄漏
  
 ```java
+  
 @Override
 protected void onDestroy() {
     super.onDestroy();
@@ -96,6 +99,7 @@ protected void onDestroy() {
 全部34项可配置字段
  
 ```java
+  
 setHeaderTag(String v)
 setCode(String v)
 setIssuer(String v)
@@ -132,7 +136,7 @@ setBackInfo3(String v)
 setBackInfo4(String v)
 setBackInfo5(String v)
 setAuthor(String v)
-```
+``` 
  
 核心控制API
  
@@ -158,8 +162,9 @@ public interface OnTornListener {
 public interface OnResetRequestListener {
     void onResetRequest();
 }
-``` 
- 
+```
+
+
 ⚠️ 注意事项
  
 1. Assets资源：需要将前端打包为  web.zip ，放置模块  src/main/assets/  目录下；版本号  VERSION  修改会自动覆盖解压更新资源。
